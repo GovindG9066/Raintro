@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raintro</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="flex flex-col min-h-screen bg-gradient-to-b from-indigo-100 to-blue-200">
+    <nav
+        class="border w-full mx-auto flex items-center justify-between px-10 min-h-28 bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 ">
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent">Raintro
+        </h1>
+        <ul class="flex gap-4">
+            <li><a href="#"
+                    class="text-xl text-white hover:text-yellow-300 hover:underline transition-colors duration-300">Home</a>
+            </li>
+            <li><a href="#"
+                    class="text-xl text-white hover:text-yellow-300 hover:underline transition-colors duration-300">About</a>
+            </li>
+            <li><a href="#"
+                    class="text-xl text-white hover:text-yellow-300 hover:underline transition-colors duration-300">Location</a>
+            </li>
+            <li><a href="#"
+                    class="text-xl text-white hover:text-yellow-300 hover:underline transition-colors duration-300">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="flex flex-col items-center flex-grow">
+        <h1 class="text-center text-4xl mt-2 font-bold text-purple-600 animate-pulse">☁️Check the weather</h1>
+        <p class="text-center text-gray-700 text-xl my-3">Enter your City to get the latest weather update</p>
+        <input type="text" id="search-weather"
+            class="w-[50%] border border-gray-300 focus:outline-none rounded-full shadow-lg pl-4 py-2 text-xl text-indigo-500 focus:ring-2 focus:ring-blue-400"
+            placeholder="Search your city">
+        <button
+            class="border border-black px-6 py-2 rounded-lg my-3 bg-blue-500 text-white hover:bg-blue-600 shadow-md transition-all duration-300 ">Search</button>
+    </section>
+
+    <footer
+        class="text-center py-4 text-sm text-gray-500 border-t border-gray-300 bg-white bg-opacity-20 backdrop-blur-md">
+        © 2025 Raintro. All rights reserved.
+    </footer>
+
+
+</body>
+
+</html>
