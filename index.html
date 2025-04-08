@@ -6,33 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raintro</title>
     <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="flex flex-col min-h-screen bg-gradient-to-b from-indigo-100 to-blue-200">
+<body class=" flex-col min-h-screen bg-gradient-to-b from-indigo-100 to-blue-200">
     <nav
-        class="border w-full mx-auto flex items-center justify-between px-10 min-h-28 bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 ">
-        <h1 class="text-2xl font-bold bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent">Raintro
-        </h1>
-        <ul class="flex gap-4">
-            <li><a href="#"
-                    class="text-xl text-white hover:text-yellow-300 hover:underline transition-colors duration-300">Home</a>
-            </li>
-            <li><a href="#"
-                    class="text-xl text-white hover:text-yellow-300 hover:underline transition-colors duration-300">About</a>
-            </li>
-            <li><a href="#"
-                    class="text-xl text-white hover:text-yellow-300 hover:underline transition-colors duration-300">Location</a>
-            </li>
-            <li><a href="#"
-                    class="text-xl text-white hover:text-yellow-300 hover:underline transition-colors duration-300">Contact</a>
-            </li>
-        </ul>
+        class=" nav-section border flex w-full mx-auto sm:flex items-center justify-between px-10 relative min-h-28 bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 ">
+        <a class="menu-icon  sm:hidden fixed left-1 top-2 font-bold text-white" href=""><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#FFFFFF"
+                class="font-bold" fill="none">
+                <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg></a>
+
+        <div class="title-container w-full">
+            <h1
+                class="title-section text-4xl sm:justify-start flex justify-center items-center  font-bold bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent">
+                Raintro
+            </h1>
+        </div>
+        <div class="home-section sm:w-96 w-64 h-full fixed top-0 left-0 -translate-x-full  z-50 sm:flex gap-6 sm:gap-4 sm:relative sm:bg-transparent bg-gray-300 text-center transition-transform duration-300">
+            <ul
+                class=" sm:flex  gap-4 px-2 ">
+                <li><a href="#"
+                        class="text-xl text-white hover:text-yellow-300 hover:underline transition-colors duration-300">Home</a>
+                </li>
+                <li><a href="#"
+                        class="text-xl text-white hover:text-yellow-300 hover:underline transition-colors duration-300">About</a>
+                </li>
+                <li><a href="#"
+                        class="text-xl text-white hover:text-yellow-300 hover:underline transition-colors duration-300">Location</a>
+                </li>
+                <li><a href="#"
+                        class="text-xl text-white hover:text-yellow-300 hover:underline transition-colors duration-300">Contact</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <section class="flex flex-col items-center flex-grow">
-        <h1 class="text-center text-4xl mt-2 font-bold text-purple-600 animate-pulse">☁️Check the weather</h1>
-        <p class="text-center text-gray-700 text-xl my-3">Enter your City to get the latest weather update</p>
+    <section class="flex flex-col items-center flex-grow justify-center">
+        <h1 class="text-center text-3xl sm:text-4xl mt-2 font-bold text-purple-600 animate-pulse">☁️Check the weather
+        </h1>
+        <p class="text-center text-gray-700 text-md sm:text-xl my-3">Enter your City to get the latest weather update
+        </p>
         <input type="text" id="search-weather"
-            class="w-[50%] border border-gray-300 focus:outline-none rounded-full shadow-lg pl-4 py-2 text-xl text-indigo-500 focus:ring-2 focus:ring-blue-400"
+            class="sm:w-[50%] md:w-[60%] w-54 border border-gray-300 focus:outline-none rounded-full shadow-lg pl-4 py-2 text-xl text-indigo-500 focus:ring-2 focus:ring-blue-400"
             placeholder="Search your city">
         <button
             class="border border-black px-6 py-2 rounded-lg my-3 bg-blue-500 text-white hover:bg-blue-600 shadow-md transition-all duration-300 ">Search</button>
@@ -43,7 +64,7 @@
         © 2025 Raintro. All rights reserved.
     </footer>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
