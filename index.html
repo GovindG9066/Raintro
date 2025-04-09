@@ -13,15 +13,7 @@
 </head>
 
 <body class=" flex-col min-h-screen bg-gradient-to-b from-indigo-100 to-blue-200">
-    <video id="bgRainVideo" autoplay muted loop class="fixed top-0 rain hidden left-0 w-full h-full object-cover -z-10 opacity-70">
-        <source src="Video/Untitled video - Made with Clipchamp (1).mp4" type="video/mp4" />
-      </video>
-      <video id="bgCloudVideo" autoplay muted loop class="fixed top-0 rain hidden left-0 w-full h-full object-cover -z-10 opacity-70">
-        <source src="Video/Clouds and sun time-lapse - Free stock footage.mp4" type="video/mp4" />
-      </video>
-      <video id="bgSunVideo" autoplay muted loop class="fixed top-0 rain hidden left-0 w-full h-full object-cover -z-10 opacity-70">
-        <source src="Video/AFTERNOON SUN LIGHT HD.mp4" type="video/mp4" />
-      </video>
+     
       
     <nav
         class="border border-red-800 px-5 relative flex sm:justify-between justify-center items-center min-h-28 bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 ">
@@ -36,10 +28,10 @@
             <ul
                 class=" list-home-items sm:flex sm:relative sm:left-auto absolute left-[-100%] top-0 px-5 w-1/3 py-2 pt-5 z-50 sm:bg-transparent bg-slate-400 sm:h-auto h-screen sm:gap-4 gap-5 flex-row transition-all ease-in-out duration-300 text-white text-xl">
                 <i class=" exit-home fa-solid fa-xmark sm:hidden absolute text-red-500 cursor-pointer right-2 text-2xl transition-transform duration-300 ease-in-out"></i>
-                <li class=" my-2 text-white px-3 py-1 rounded hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 w-2/3"><a class="" href="/index.html">Home</a></li>
-                <li class=" my-2 text-white px-3 py-1 rounded hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 w-2/3"><a class="" href="">About</a></li>
-                <li class=" my-2 text-white px-3 py-1 rounded hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 w-2/3"><a class="" href="">Location</a></li>
-                <li class=" my-2 text-white px-3 py-1 rounded hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 w-2/3"><a class="" href="">Contact</a></li>
+                <li class=" my-2 text-white px-3 py-1 rounded hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 sm:w-auto w-2/3"><a class="" href="/index.html">Home</a></li>
+                <li id="about" class=" my-2 text-white px-3 py-1 rounded hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 sm:w-auto w-2/3"><a class="" href="#">About</a></li>
+                <li id="location" class=" my-2 text-white px-3 py-1 rounded hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 sm:w-auto w-2/3"><a class="" href="#">Location</a></li>
+                <li id="contact" class=" my-2 text-white px-3 py-1 rounded hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 sm:w-auto w-2/3"><a class="" href="#">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -50,7 +42,10 @@
         </p>
         <input type="text" id="cityInput"
             class="sm:w-[50%] md:w-[60%] w-54 border border-gray-300 focus:outline-none rounded-full shadow-lg pl-4 py-2 text-xl text-indigo-500 focus:ring-2 focus:ring-blue-400"
-            placeholder="Search your city">
+            placeholder="Search your city"  autocomplete="off">
+            <ul id="suggestions"
+        class="bg-white border border-gray-300 rounded-xl mt-2 hidden max-h-60 overflow-auto z-50 absolute w-[90%] sm:w-[50%] md:w-[60%] text-lg text-gray-700 shadow-xl">
+    </ul>
         <button
             onclick="getWeather()"
             class="border border-black px-6 py-2 rounded-lg my-3 bg-blue-500 text-white hover:bg-blue-600 shadow-md transition-all duration-300 ">Search</button>
@@ -58,6 +53,103 @@
             <div id="weatherResult" class="mt-6 mb-10 flex flex-col gap-4 w-full max-w-xl mx-auto px-4"></div>
 
     </section>
+
+    <section id="contact-section" class=" p-6 bg-white shadow-lg rounded-xl mt-10 mb-10 w-screen z-50 h-screen fixed left-0 bottom-[-150%] transition-transform duration-500 ease-in-out">
+        <span><i class=" exit-contact fa-solid fa-xmark absolute text-red-500 cursor-pointer right-5 text-2xl transition-transform duration-300 ease-in-out"></i></span>
+        <h2 class="text-2xl font-bold text-indigo-600 mb-4">Contact</h2>
+        <p class="text-gray-700 text-lg mb-2">If you have any feedback or suggestions, feel free to reach out!</p>
+        <ul class="text-lg text-indigo-500">
+          <li class="text-black">Email: <a href="gadekargovind575@gmail.com" class="underline text-blue-500">gadekargovind575@gmail.com</a></li>
+          <li class="text-black">GitHub: <a href="https://github.com/GovindG9066" target="_blank" class="underline text-blue-500">github.com/GovindG9066</a></li>
+          <li class="text-black">LinkedIn: <a href="https://www.linkedin.com/in/govind-gadekar-635441252/?trk=opento_sprofile_details" target="_blank" class="underline text-blue-500">linkedin.com/in/GovindGadekar</a></li>
+        </ul>
+      </section>
+
+      <section id="about-section" class="p-6 bg-white shadow-lg rounded-xl mt-10 w-screen z-50 h-screen fixed left-0 bottom-[-150%] transition-transform duration-500 ease-in-out">
+        <span><i class=" exit-about fa-solid fa-xmark absolute text-red-500 cursor-pointer right-5 text-2xl transition-transform duration-300 ease-in-out"></i></span>
+
+        <h2 class="text-2xl font-bold text-indigo-600 mb-4">About This Website</h2>
+        <p class="text-gray-700 text-lg">
+          This weather app provides real-time weather updates of any city you search.
+          Just type the city name in the search bar, and get temperature, wind speed, humidity, and weather condition instantly.
+          Built using HTML, Tailwind CSS, JavaScript, GeoDB Cities API, and OpenWeatherMap API.
+        </p>
+      </section>
+
+      <section id="location-section" class="p-6 bg-gray-100 shadow-lg rounded-xl mt-10 w-screen z-50 h-screen fixed left-0 top-0 transition-transform duration-500 ease-in-out">
+        <span><i class="exit-location fa-solid fa-xmark absolute text-red-500 cursor-pointer right-5 text-2xl transition-transform duration-300 ease-in-out"></i></span>
+        <h2 class="text-2xl font-bold text-indigo-600 mb-4">Location</h2>
+        <p class="text-gray-700 text-lg">
+          This web app works worldwide. You can search for any city around the globe and get its weather information instantly.
+        </p>
+        <ul class="flex flex-wrap gap-4 mt-6 justify-center">
+            <li>
+              <button class="city-btn bg-indigo-500 text-white w-32 h-12 rounded-md hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                Mumbai
+              </button>
+            </li>
+            <li>
+              <button class="city-btn bg-indigo-500 text-white w-32 h-12 rounded-md hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                Delhi
+              </button>
+            </li>
+            <li>
+              <button class="city-btn bg-indigo-500 text-white w-32 h-12 rounded-md hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                Pune
+              </button>
+            </li>
+            <li>
+              <button class="city-btn bg-indigo-500 text-white w-32 h-12 rounded-md hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                Kolkata
+              </button>
+            </li>
+            <li>
+              <button class="city-btn bg-indigo-500 text-white w-32 h-12 rounded-md hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                Pathna
+              </button>
+            </li>
+            <li>
+              <button class="city-btn bg-indigo-500 text-white w-32 h-12 rounded-md hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                Kolhapur
+              </button>
+            </li>
+            <li>
+              <button class="city-btn bg-indigo-500 text-white w-32 h-12 rounded-md hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                Latur
+              </button>
+            </li>
+            <li>
+              <button class="city-btn bg-indigo-500 text-white w-32 h-12 rounded-md hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                Rajgurunagar
+              </button>
+            </li>
+            <li>
+              <button class="city-btn bg-indigo-500 text-white w-32 h-12 rounded-md hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                Outur
+              </button>
+            </li>
+            <li>
+              <button class="city-btn bg-indigo-500 text-white w-32 h-12 rounded-md hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                Junnar
+              </button>
+            </li>
+            <li>
+              <button class="city-btn bg-indigo-500 text-white w-32 h-12 rounded-md hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                Narayangaon
+              </button>
+            </li>
+            <li>
+              <button class="city-btn bg-indigo-500 text-white w-32 h-12 rounded-md hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                peth
+              </button>
+            </li>
+          </ul>
+          
+          
+      </section>
+      
+      
+      
 
     <footer class="fixed bottom-0 w-full border">
         <div class="flex justify-center items-center py-2 text-gray-500">
@@ -67,6 +159,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="locationScript.js"></script>
 </body>
 
 </html>
