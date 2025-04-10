@@ -55,18 +55,23 @@ This project helped me enhance my skills in:
 
 ---
 
-🙋‍♂️ Author
-Govind Dagadu Gadekar
-📧 gadekargovind575@gmail.com
-🔗 Portfolio-https://portfolio-omega-three-84.vercel.app/
-🔗 LinkedIn-linkedin.com/in/govind-gadekar-635441252/?trk=opento_sprofile_details
+## 🙋‍♂️ Author  
+**Govind Dagadu Gadekar**  
+📧 [gadekargovind575@gmail.com](mailto:gadekargovind575@gmail.com)  
+🔗 [Portfolio](https://portfolio-omega-three-84.vercel.app/)  
+🔗 [LinkedIn](https://linkedin.com/in/govind-gadekar-635441252/?trk=opento_sprofile_details)
 
-⭐️ Support & Feedback
-If you liked the project, feel free to ⭐️ this repo.
+---
+
+## ⭐️ Support & Feedback  
+If you liked the project, feel free to ⭐️ this repo.  
 Suggestions and pull requests are always welcome!
 
-📄 License
-This project is licensed under the MIT License.
+---
+
+## 📄 License  
+This project is licensed under the [MIT License](LICENSE).
+
 
 ## 💻 Run Locally
 
