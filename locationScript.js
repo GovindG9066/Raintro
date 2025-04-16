@@ -1,8 +1,7 @@
 let buttons = document.querySelectorAll(".city-btn");
 
-// ⬇️ Yeh do elements ko pehle define karo
-let Location = document.querySelector("#location-section"); // Replace with correct ID/class
-let list_home_items = document.querySelector(".list-home-items"); // Replace with correct ID/class
+let Location = document.querySelector("#location-section"); 
+let list_home_items = document.querySelector(".list-home-items"); 
 
 buttons.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -13,7 +12,6 @@ buttons.forEach(btn => {
     
 
 
-        // ✅ Safe check: agar element mil gaya hai toh hi proceed karo
         if (Location) {
             Location.classList.remove('top-0');
             Location.classList.add('bottom-[-150%]');

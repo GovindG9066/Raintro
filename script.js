@@ -11,7 +11,6 @@ exitHome.addEventListener('click', () => {
   listHomeItems.classList.replace('left-0', 'left-[-100%]');
 });
 
-// ========== Weather Fetch ==========
 async function getWeather() {
   const city = document.getElementById("cityInput").value;
   const apiKey = "c6cb561fd6e4ba71fe5c85def29416b5";
@@ -79,7 +78,6 @@ async function getWeather() {
   }
 }
 
-// ========== Enter Key Search ==========
 document.getElementById("cityInput").addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     e.preventDefault();
@@ -87,7 +85,6 @@ document.getElementById("cityInput").addEventListener("keydown", function (e) {
   }
 });
 
-// ========== City Suggestions ==========
 async function fetchCitySuggestions() {
   const input = document.getElementById("cityInput").value;
   const suggestionBox = document.getElementById("suggestions");
@@ -131,7 +128,6 @@ async function fetchCitySuggestions() {
 
 document.getElementById("cityInput").addEventListener("input", fetchCitySuggestions);
 
-// ========== Modal Section Handling ==========
 const contactBtn = document.getElementById('contact');
 const contactSection = document.getElementById('contact-section');
 const exitContact = document.querySelector('.exit-contact');
